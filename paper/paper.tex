@@ -3,6 +3,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage[russian]{babel}
 
+
 \begin{document}
 
 \begin{titlepage}
@@ -36,23 +37,160 @@
 \newpage
 
 \section{Введение}
-
-Dummy text
-
 \subsection{Предмет исследования}
 
-Dummy text
+Предметом данного иссследования является зависимость числа умышленных убийств (убийств первой степени
+в законодательстве Соединённых Штатов) от количества владельцев оружия в разных городах США.
 
 \subsection{Описание случайных величин}
 
-Dummy text
+Величины берутся в единицах на сто тысяч человек. Исходные данные были загружены с сайта ФБР. Данные актуальны на 2019 год.
+\par
+Количество умышленных убийств --- количество известных ФБР правонарушений, связанных с умышленным причинением смерти, произошедших
+в 2019 году на территории определённого города.
+\par
+Количество владельцев оружия --- общее число граждан США, живущих на территории определённого города, получивших от ФБР разрешение
+на покупку оружия. Определяется в основном строгостью законов в штате или городе, потому может сильно отличаться на разных
+территориях страны. \par
+Случайная выборка из ста значений исследуемых случайных величин представлена в таблице в приложении~\ref{sec:appendix} (названия городов
+указаны как в оригинале --- на английском).
 
 \subsection{Актуальность исследования}
 
-Dummy text
+Исследование позволяет установить, помогает ли ограничение оборота оружия снизить количество преступлений, связанных с насилием,
+в частности убийств. Этим подтверждается её актуальность.
 
 \subsection{Цель исследования}
 
-Dummy text
+Цель работы --- установить, есть ли зависимость между количеством умышленных убийств и количеством владельцев оружия на душу населения.
+
+\clearpage
+\appendix
+\section{Выборка из собранных данных}
+\label{sec:appendix}
+\begin{table}[!ht]
+    \centering
+    \begin{tabular}{|l|l|l|}
+    \hline
+        Город & Количество убийств & Количество владельцев оружия \\ \hline
+        Buckeye & 137 & 46300 \\ \hline
+        Nevada & 255 & 48800 \\ \hline
+        Dilley & 223 & 45700 \\ \hline
+        GrossePointe & 117 & 40200 \\ \hline
+        NewHaven & 297 & 44800 \\ \hline
+        Harrisonville & 277 & 48800 \\ \hline
+        Boston, & 607 & 14700 \\ \hline
+        OakGrove & 207 & 48800 \\ \hline
+        Tomahawk & 96 & 45300 \\ \hline
+        Winchester & 481 & 51600 \\ \hline
+        Hulbert & 171 & 54700 \\ \hline
+        Emerson & 0 & 45200 \\ \hline
+        Winneconne & 80 & 45300 \\ \hline
+        VillaPark & 157 & 27800 \\ \hline
+        BradentonBeach & 155 & 35300 \\ \hline
+        Beatrice & 180 & 45200 \\ \hline
+        Northglenn & 457 & 45100 \\ \hline
+        Hutchinson & 378 & 48900 \\ \hline
+        WarminsterTownship & 84 & 40700 \\ \hline
+        Lyndhurst & 104 & 40000 \\ \hline
+        Bath & 48 & 46800 \\ \hline
+        Redmond & 102 & 42100 \\ \hline
+        RobinsonTownship & 124 & 40700 \\ \hline
+        Streetsboro & 121 & 40000 \\ \hline
+        Chickasha & 433 & 54700 \\ \hline
+        Murphy & 43 & 45700 \\ \hline
+        Melbourne & 692 & 35300 \\ \hline
+        Killeen & 384 & 45700 \\ \hline
+        Maumee & 103 & 40000 \\ \hline
+        Hanford & 449 & 28300 \\ \hline
+        Pembroke & 92 & 44600 \\ \hline
+        Elwood & 133 & 27800 \\ \hline
+        Ashburnham & 126 & 14700 \\ \hline
+        Athol & 402 & 14700 \\ \hline
+        HedwigVillage & 224 & 45700 \\ \hline
+        Elkton & 103 & 44600 \\ \hline
+        Clarkdale & 68 & 46300 \\ \hline
+        Auburn & 146 & 46800 \\ \hline
+        Bokchito & 581 & 54700 \\ \hline
+        Corning & 372 & 28300 \\ \hline
+    \end{tabular}
+\end{table}
+\begin{table}[!ht]
+    \centering
+    \begin{tabular}{|l|l|l|}
+    \hline
+        Город & Количество убийств & Количество владельцев оружия \\ \hline
+        Madison & 84 & 45200 \\ \hline
+        Hastings & 246 & 40200 \\ \hline
+        RanchoCordova & 297 & 28300 \\ \hline
+        Viola & 0 & 27800 \\ \hline
+        Jonesville & 272 & 40200 \\ \hline
+        Ackerman & 139 & 55800 \\ \hline
+        Mazon & 103 & 27800 \\ \hline
+        SouthHaven & 555 & 40200 \\ \hline
+        Fishers & 53 & 44800 \\ \hline
+        Orion & 56 & 27800 \\ \hline
+        Plymouth & 327 & 14700 \\ \hline
+        Federalsburg & 528 & 30200 \\ \hline
+        NewLondon & 294 & 23600 \\ \hline
+        Niles & 774 & 40200 \\ \hline
+        Rossville & 0 & 51600 \\ \hline
+        LaVergne & 392 & 51600 \\ \hline
+        Somerset & 0 & 40000 \\ \hline
+        Emporia & 240 & 44600 \\ \hline
+        Rosenberg & 380 & 45700 \\ \hline
+        EagleVillage & 47 & 45300 \\ \hline
+        Franklin & 165 & 51600 \\ \hline
+        Ellensburg & 211 & 42100 \\ \hline
+        Hemet & 398 & 28300 \\ \hline
+        RomanForest & 148 & 45700 \\ \hline
+        Perry & 245 & 54700 \\ \hline
+        Refugio & 109 & 45700 \\ \hline
+        Norfork & 0 & 57200 \\ \hline
+        OliverSprings & 58 & 51600 \\ \hline
+        Williamstown & 0 & 54600 \\ \hline
+        Wynona & 0 & 54700 \\ \hline
+        Dunwoody & 128 & 49200 \\ \hline
+        Verona & 990 & 48800 \\ \hline
+        Chicopee & 615 & 14700 \\ \hline
+        GenevaTown & 40 & 45300 \\ \hline
+        Avon & 63 & 42800 \\ \hline
+        Auburn & 73 & 54600 \\ \hline
+        Clinton & 160 & 54600 \\ \hline
+        Mathis & 440 & 45700 \\ \hline
+        Okmulgee & 615 & 54700 \\ \hline
+        Newport & 806 & 50500 \\ \hline
+        Halifax & 164 & 44600 \\ \hline
+        Kirtland & 88 & 40000 \\ \hline
+    \end{tabular}
+\end{table}
+\begin{table}[!ht]
+    \centering
+    \begin{tabular}{|l|l|l|}
+    \hline
+        Город & Количество убийств & Количество владельцев оружия \\ \hline
+        Adrian & 689 & 40200 \\ \hline
+        PalmSprings & 636 & 35300 \\ \hline
+        FrontRoyal & 183 & 44600 \\ \hline
+        MissouriCity & 141 & 45700 \\ \hline
+        Visalia & 434 & 28300 \\ \hline
+        PigeonForge & 736 & 51600 \\ \hline
+        Beebe & 279 & 57200 \\ \hline
+        Manhattan & 375 & 66300 \\ \hline
+        Williamston & 176 & 40200 \\ \hline
+        Berkeley & 503 & 28300 \\ \hline
+        BerwynHeights & 214 & 30200 \\ \hline
+        Muscatine & 197 & 43600 \\ \hline
+        WilkinsTownship & 49 & 40700 \\ \hline
+        LakeZurich & 40 & 27800 \\ \hline
+        Merrillville & 144 & 44800 \\ \hline
+        Buhl & 360 & 60100 \\ \hline
+        PalosHeights & 40 & 27800 \\ \hline
+        Martinez & 215 & 28300 \\ \hline
+    \end{tabular}
+\end{table}
+
+\mbox{}
+\vfill
 
 \end{document}
