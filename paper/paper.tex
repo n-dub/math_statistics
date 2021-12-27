@@ -146,13 +146,13 @@ W_i = \sum_{k = 0}^{i} w_k
 \item
 Выборочная средняя (значения $x_i$ и $n_i$ возьмём из таблицы выше):
 \begin{equation*}
-\bar{X}_B = \frac{1}{N} \sum_{i = 1}^N x_i n_i \approx 216.51
+\overline{X}_B = \frac{1}{N} \sum_{i = 1}^N x_i n_i \approx 216.51
 \end{equation*}
 
 \item
 Выборочная дисперсия:
 \begin{equation*}
-D_B = \frac{1}{N} \sum_{i = 1}^N (x_i - \bar{X}_B)^2 n_i \approx 26934.1
+D_B = \frac{1}{N} \sum_{i = 1}^N (x_i - \overline{X}_B)^2 n_i \approx 26934.1
 \end{equation*}
 
 \item
@@ -176,13 +176,13 @@ S = \sqrt{S^2} \approx 164.996
 \item
 Ассиметрия --- мера смещения графика влево-вправо:
 \begin{equation*}
-A = \frac{1}{N S^3} \sum_{i = 1}^N (x_i - \bar{X}_B)^3 n_i \approx 0.793
+A = \frac{1}{N S^3} \sum_{i = 1}^N (x_i - \overline{X}_B)^3 n_i \approx 0.793
 \end{equation*}
 
 \item
 Эксцесс --- мера высоты графика:
 \begin{equation*}
-e_x = \frac{1}{N S^4} \sum_{i = 1}^N (x_i - \bar{X}_B)^4 n_i \approx -0.512
+e_x = \frac{1}{N S^4} \sum_{i = 1}^N (x_i - \overline{X}_B)^4 n_i \approx -0.512
 \end{equation*}
 \end{itemize}
 
@@ -190,7 +190,7 @@ e_x = \frac{1}{N S^4} \sum_{i = 1}^N (x_i - \bar{X}_B)^4 n_i \approx -0.512
 Определим доверительный интервал для оценки математического ожидания при надежности $\gamma = 0.95$.
 Доверительный интервал – интервал, который покрывает неизвестный параметр с заданной надёжностью.
 \begin{equation*}
-\bar{X}_B - \delta < a < \bar{X}_B + \delta
+\overline{X}_B - \delta < a < \overline{X}_B + \delta
 \end{equation*}
 Где $\delta = \frac{t_{\gamma} S}{\sqrt N}$. Из уравнения $\Phi (t_{\gamma}) = \gamma$ вычислим, что $t_{\gamma} \approx 1.96$. Тогда $\delta \approx 33.355$.
 
@@ -207,7 +207,7 @@ e_x = \frac{1}{N S^4} \sum_{i = 1}^N (x_i - \bar{X}_B)^4 n_i \approx -0.512
 
 Функция нормального распределения $F (x) = \frac{1}{2} + \Phi(\frac{x - a}{\sigma})$.
 \begin{equation*}
-P(X_i < x < X_{i+1}) = F(X_{i+1}) - F(X_i) = \Phi \left( \frac{x_{i+1} - \bar{X}_B}{S} \right) - \Phi \left(\frac{x_i - \bar{X}_B}{S} \right)
+P(X_i < x < X_{i+1}) = F(X_{i+1}) - F(X_i) = \Phi \left( \frac{x_{i+1} - \overline{X}_B}{S} \right) - \Phi \left(\frac{x_i - \overline{X}_B}{S} \right)
 \end{equation*}
 
 \clearpage
@@ -216,7 +216,7 @@ P(X_i < x < X_{i+1}) = F(X_{i+1}) - F(X_i) = \Phi \left( \frac{x_{i+1} - \bar{X}
     \centering
     \begin{tabular}{|l|l|l|l|l|l|l|l|l|}
     \hline
-		$X_i$ & $X_{i+1}$ & $\frac{x_i - \bar{X}_B}{S}$ & $\frac{x_{i+1} - \bar{X}_B}{S}$ & $\Phi \left( \frac{x_{i+1} - \bar{X}_B}{S} \right)$ & $\Phi \left(\frac{x_i - \bar{X}_B}{S} \right)$ & $P$ & $nP$ & $\frac{(n - nP)^2}{nP}$ \\ \hline
+		$X_i$ & $X_{i+1}$ & $\frac{x_i - \overline{X}_B}{S}$ & $\frac{x_{i+1} - \overline{X}_B}{S}$ & $\Phi \left( \frac{x_{i+1} - \overline{X}_B}{S} \right)$ & $\Phi \left(\frac{x_i - \overline{X}_B}{S} \right)$ & $P$ & $nP$ & $\frac{(n - nP)^2}{nP}$ \\ \hline
 		0 & 106 & 31 & -1.312 & -0.669 & -0.405 & -0.248 & 0.156 & 14.736 \\ \hline
 		106 & 212 & 25 & -0.669 & -0.027 & -0.248 & -0.010 & 0.237 & 22.333 \\ \hline
 		212 & 318 & 14 & -0.027 & 0.615  & -0.010 &  0.230 & 0.241 & 22.716 \\ \hline
@@ -226,7 +226,74 @@ P(X_i < x < X_{i+1}) = F(X_{i+1}) - F(X_i) = \Phi \left( \frac{x_{i+1} - \bar{X}
     \end{tabular}
 \end{table}
 
-Откуда $\chi^2 = \sum \frac{(n_i - n_i P)^2}{n_i P} \approx 30.358$. В результате уровень значимости $\alpha \approx 1.16 \cdot 10^{-6}$. На вычисленном уровне значимости принимаем нулевую гипотезу.
+Откуда $\chi^2 = \sum \frac{(n_i - n_i P)^2}{n_i P} \approx 30.358$. В результате уровень значимости $\alpha \approx 1.16 \cdot 10^{-6}$. На вычисленном уровне значимости принимается нулевую гипотезу.
+
+\subsection{Выводы}
+Гипотеза о нормальном распределении была отклонена. Из эксцесса и коэффициента ассиметрии следует, что распределение отклонено вправо и вниз относительно нормального.
+
+\section{Часть вторая. Исследование двумерной выборки}
+\subsection{Первые начальные моменты}
+\begin{equation*}
+v_{10} = \overline{X}_B = \sum_{i=1}^N x_i n_{xi} \approx 216.51
+\end{equation*}
+\begin{equation*}
+v_{01} = \overline{Y}_B = \sum_{i=1}^N y_i n_{yi} \approx 41231.91
+\end{equation*}
+
+\subsection{Вторые центральные моменты}
+\begin{equation*}
+\mu_{20} = \frac{1}{N} \sum_{i = 1}^N (x_i - \overline{X}_B)^2 n_{xi} \approx 26934.1
+\end{equation*}
+\begin{equation*}
+\mu_{02} = \frac{1}{N} \sum_{i = 1}^N (y_i - \overline{Y}_B)^2 n_{yi} \approx 106076853.77
+\end{equation*}
+
+\begin{equation*}
+K_{xy} = \overline{XY} - X_B \cdot Y_B
+\end{equation*}
+
+\clearpage
+Составим корреляционную таблицу:
+\begin{table}[!ht]
+    \centering
+    \begin{tabular}{|l|l|l|l|l|l|l|}
+    \hline
+        ~ & (14700;23300] & (23300;31900] & (31900;40500] & (40500;49100] & (49100;57700] & (57700;66300] \\ \hline
+        (0;106] & 0 & 5 & 4 & 16 & 6 & 0 \\ \hline
+        (106;212] & 1 & 2 & 4 & 13 & 5 & 0 \\ \hline
+        (212;318] & 0 & 4 & 2 & 6 & 2 & 0 \\ \hline
+        (318;424] & 2 & 2 & 0 & 3 & 1 & 2 \\ \hline
+        (424;530] & 0 & 4 & 0 & 2 & 2 & 0 \\ \hline
+        (530;636] & 2 & 0 & 2 & 0 & 2 & 0 \\ \hline
+    \end{tabular}
+\end{table}
+
+И таблицу, в которой на пересечении $i$-й строки и $j$-го столбца находится значение $n_{ij} \cdot x_i \cdot y_j$:
+
+\begin{table}[!ht]
+    \centering
+    \begin{tabular}{|l|l|l|l|l|l|l|}
+    \hline
+        ~ & 19000 & 27600 & 36200 & 44800 & 53400 & 62000 \\ \hline
+        53.0 & 0 & 5035000 & 4028000 & 16112000 & 6042000 & 0 \\ \hline
+        159.0 & 4388400 & 8776800 & 17553600 & 57049200 & 21942000 & 0 \\ \hline
+        265.0 & 0 & 38372000 & 19186000 & 57558000 & 19186000 & 0 \\ \hline
+        371.0 & 33241600 & 33241600 & 0 & 49862400 & 16620800 & 33241600 \\ \hline
+        477.0 & 0 & 101887200 & 0 & 50943600 & 50943600 & 0 \\ \hline
+        583.0 & 72292000 & 0 & 72292000 & 0 & 72292000 & 0 \\ \hline
+    \end{tabular}
+\end{table}
+
+Используя эту таблицу можно посчитать $\overline{XY}$ (сложить всё и поделить на объём выборки).
+
+\begin{equation*}
+\overline{XY} = \frac{1}{N} \sum \sum x_i y_j n_{ij} \approx 9171142.55
+\end{equation*}
+
+Тогда $K_{xy} \approx 243994.34$. Откуда коэффициент корреляции:
+\begin{equation*}
+r_{xy} = \frac{K_{xy} }{ \sqrt{\mu_{20} \cdot \mu_{02} } } \approx 0.144
+\end{equation*}
 
 \clearpage
 \appendix
